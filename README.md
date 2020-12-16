@@ -12,8 +12,10 @@ usage:
         |3) php                           |
         |4) bash                          |
         |5) perl                          |
-        |6) ruby                          |
+        |6) netcat traditional            |
         |7) netcat                        |
+        |8) ruby                          |
+        |9) golang                        |
         +---------------------------------+
         
         select mode...
