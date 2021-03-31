@@ -5,7 +5,11 @@ auto reverseshell payload generetor and listening
 
 Install:
 
-        git clone  
+        git clone  https://github.com/M4chin3M4N/shellromancer.git
+        
+        cd shellromancer
+        
+        sudo python3 setup.py
 
 
 
@@ -13,7 +17,7 @@ Install:
 
 
 usage:
-        python3 shellromancer.py
+        shellromancer
         
         
         +---------------------------------+
@@ -35,6 +39,8 @@ press any number 1 ~
 and enter LHOST and LPORT
 
 generate the payload and netcat waiting for connection in LPORT
+
+if you installed pwncat, then automatically listen in pwncat
 
 [!]payload.py is module 
 
