@@ -2,6 +2,16 @@
 
 auto reverseshell payload generetor and listening
 
+
+Install:
+
+        git clone  
+
+
+
+
+
+
 usage:
         python3 shellromancer.py
         
@@ -31,8 +41,9 @@ generate the payload and netcat waiting for connection in LPORT
 
 
 requirement:
-              pip3 install art
+              you have to execute setup.py as root
               
+              "sudo python3 setup.py"
 
 
 
