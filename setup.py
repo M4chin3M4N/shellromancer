@@ -7,8 +7,8 @@ if os.getuid() != 0:
   sys.exit()
   
 step1 = f"chmod +x shellromancer.py"
-step2 = f"mv shellromancer.py /usr/bin/shellromancer"
-step3 = f"mv payload.py /usr/bin"
+step2 = f"cp shellromancer.py /usr/bin/shellromancer"
+step3 = f"cp payload.py /usr/bin"
 
 os.system(step1)
 os.system(step2)
