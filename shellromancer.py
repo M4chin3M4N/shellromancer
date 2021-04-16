@@ -117,5 +117,9 @@ try:
     os.system("pwncat -l "+port)
 
 except:
+    
+    print("[!]pwncat is not found ")
+    
+finally:
     os.system("nc -nlvp "+port)
 
