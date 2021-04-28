@@ -8,7 +8,7 @@ if os.getuid() != 0:
   
 step1 = f"chmod +x shellromancer.py"
 step2 = f"cp shellromancer.py /usr/local/bin/shellromancer"
-step3 = f"cp payload.py /usr/bin"
+step3 = f"cp payload.py /usr/local/bin"
 
 os.system(step1)
 os.system(step2)
